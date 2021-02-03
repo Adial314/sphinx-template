@@ -13,6 +13,8 @@
 # import os
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
+import recommonmark
+from recommonmark.parser import CommonMarkParser
 
 
 # -- Project information -----------------------------------------------------
@@ -59,5 +61,11 @@ html_static_path = ['_static']
 source_suffix = {
     '.rst': 'restructuredtext',
     '.txt': 'markdown',
-    '.md': 'markdown',
+    '.md': 'markdown'
+}
+
+# Specify Markdown parser
+source_parsers = {
+    '.md': CommonMarkParser,
+    '.txt': CommonMarkParser
 }
